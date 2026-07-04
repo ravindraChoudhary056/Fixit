@@ -110,6 +110,35 @@ Fixit
 
 ---
 
+## 📌 Important Note
+
+> **Production Configuration**
+>
+> This project includes a **production-ready institutional email validation** system that restricts student registration to **IIIT Allahabad** email addresses (`@iiita.ac.in`).
+>
+> For demonstration and testing purposes, this validation is **temporarily disabled (commented out)**, allowing any valid email address to register and explore the application without requiring a college email.
+>
+> To switch to **production mode**, simply uncomment the email validation logic in the following files:
+>
+> **`server/models/User.js`**
+> ```javascript
+> // match: [
+> //   /^[a-zA-Z0-9._%+-]+@iiita\.ac\.in$/,
+> //   'Please use a valid IIIT Allahabad email address',
+> // ],
+> ```
+>
+> **`server/controllers/authControllers.js`**
+> ```javascript
+> // if (!email.endsWith('@iiita.ac.in')) {
+> //   return res.status(400).json({
+> //     message: 'Only @iiita.ac.in emails are allowed'
+> //   });
+> // }
+> ```
+>
+> This approach allows the application to be seamlessly deployed in **Production Mode** (college-only access) or **Demo Mode** (open registration) by simply enabling or disabling the above validation logic, without modifying the overall authentication workflow.
+
 # 🚀 Getting Started
 
 ## Clone Repository
