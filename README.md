@@ -1,8 +1,8 @@
-#  Fixit – Smart Hostel Complaint Management System
+#  Fixit – Smart Campus  Complaint Management System
 
-A production-ready **Full-Stack Complaint Management Platform** built using the **MERN Stack** to streamline hostel complaint resolution through secure authentication,
+A production-ready **Full-Stack Complaint Management Platform** built using the **MERN Stack** to streamline campus complaint resolution through secure authentication,
 role-based access control, image-supported complaints, and a transparent verification workflow.
-Designed to eliminate communication gaps between students and hostel administration while ensuring accountability throughout the complaint lifecycle.
+Designed to eliminate communication gaps between students and college administration while ensuring accountability throughout the complaint lifecycle.
 
 ---
 
@@ -40,6 +40,63 @@ Designed to eliminate communication gaps between students and hostel administrat
 - Complete complaint management system
 
 ---
+
+## 🔄 Complaint Resolution Workflow
+
+The platform follows a **multi-stage verification workflow** to ensure complaint resolution is transparent, accountable, and tamper-resistant.
+
+### 📝 Step 1 — Complaint Submission
+
+- Students can submit complaints as:
+  - 🌍 **Public Complaint** – Visible to the entire campus community.
+  - 🔒 **Private Complaint** – Visible only to the complaint owner and the Administrator.
+
+---
+
+### 👨‍💼 Step 2 — Admin Review
+
+- The Admin reviews the complaint.
+- Updates its status (**Pending → In Progress → Verification**).
+- Resolves the issue and sends it for verification instead of directly marking it as completed.
+
+---
+
+### ✅ Step 3 — Verification
+
+#### 🌍 Public Complaint
+
+- Any authenticated student can verify the resolution.
+- The identity of the student who verified the complaint is permanently recorded for transparency and accountability.
+
+#### 🔒 Private Complaint
+
+- Only the original complaint owner is authorized to verify the resolution.
+- No other student can approve or reject the complaint.
+
+---
+
+### 🔁 Step 4 — Rejection Handling
+
+If the verification is rejected:
+
+- The complaint automatically returns to the **Pending** state.
+- The latest update timestamp is refreshed.
+- The Admin is required to review and resolve the issue again.
+- A new verification request is generated after the complaint is re-resolved.
+
+---
+
+### 🎯 Final Resolution
+
+A complaint is marked as **Solved** only after successful student verification.
+
+This workflow ensures:
+
+- ✔ Transparent complaint resolution
+- ✔ Community-driven verification for public issues
+- ✔ Owner-only verification for private complaints
+- ✔ Complete auditability of the verifier
+- ✔ Prevention of false or premature complaint closure
 
 ## 🔐 Security
 
@@ -209,6 +266,7 @@ CLOUDINARY_API_SECRET=
 - AI-based Complaint Categorization
 - Email Notifications
 - Push Notifications
+- **Intelligent Priority Prediction:** Develop an ML-powered prioritization engine that classifies complaints into Low, Medium, High, and Critical levels using NLP-based text analysis, complaint metadata, and historical resolution data.
 - Complaint Analytics Dashboard
 
 ---
