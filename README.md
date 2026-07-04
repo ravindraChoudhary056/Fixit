@@ -210,8 +210,6 @@ CLOUDINARY_API_SECRET=
 - Email Notifications
 - Push Notifications
 - Complaint Analytics Dashboard
-- Dark Mode
-- Multi Hostel Support
 
 ---
 
