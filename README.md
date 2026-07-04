@@ -171,16 +171,6 @@ CLOUDINARY_API_SECRET=
 
 ---
 
-## 📸 Screenshots
-
-> Add screenshots here
-
-- Login
-- Student Dashboard
-- Admin Dashboard
-- Complaint Details
-- Profile
-- Mobile View
 
 ---
 
